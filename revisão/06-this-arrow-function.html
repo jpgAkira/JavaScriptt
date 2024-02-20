@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - This no Arrow Function</title>
+</head>
+<body>
+    
+    <button id="btn">Click Me!</button>
+</body>
+
+<script>
+
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', () => {
+        console.log(this);
+    });
+
+    /* 
+     const btn = document.getElementById('btn');
+    btn.addEventListener('click', function() {
+        console.log(this);
+    });
+
+    vai retornar o this do contexto atual!
+    já o com arrow function retorna desde o DOM!
+    */
+</script>
+</html>

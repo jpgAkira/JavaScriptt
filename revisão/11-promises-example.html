@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Promises Example</title>
+</head>
+<body>
+</body>
+
+<script>
+    var posts = fetch('textos.json');
+
+    posts
+        .then(data => data.json())
+        .then(data => data.map(post => {
+            throw new Error('ixi deu erro');
+        }))
+        .catch(err => console.error(err));
+</script>
+</html>

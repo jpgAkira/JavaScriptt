@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01- Sets Intro</title>
+</head>
+<body>
+</body>
+
+<script>
+    // baseado no interator
+    
+    let mySet = new Set(['Willian', 'Jonas', 'Godoy']);
+
+    mySet('marcio');
+    mySet('marcio');
+    mySet('marcio');
+    mySet('willian');
+
+    mySet.delete('willian');
+
+   console.log(mySet.has('willian'));
+   console.log(mySet.has('marcio'));
+
+   let it = mySet.values();
+
+   console.log(it.next());
+
+   for(name of it) {
+        console.log(name);
+   }
+</script>
+</html>

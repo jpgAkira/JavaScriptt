@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Promiese Múltiplos</title>
+</head>
+<body>
+</body>
+
+<script>
+    const currency = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({ currency: 'euro', value: 3.50});
+        }, 2000);
+    });
+
+    const countries = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(['Ireland', 'England', 'Scotland']);
+        }, 600);
+    });
+
+    // Promise
+    //     .all([currency, countries])
+    //     .then(responses => {
+    //         console.log(responses);
+    //     })
+
+        Promise
+            .race([currency, countries])
+            .then(response => {
+                console.log(responses);
+            })
+</script>
+</html>
